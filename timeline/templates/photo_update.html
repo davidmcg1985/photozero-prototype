@@ -11,7 +11,7 @@
 			<div class="col-md-12">
 				<h1>Edit Photo</h1>
 				<form method='POST' action='' enctype='multipart/form-data'>{% csrf_token %}
-					{{ form | crispy }}
+					{{ form.as_p }}
 					<br/>
 					<input type='submit' class='btn btn-block btn-lg btn-dark' value='Update' />
 				</form>

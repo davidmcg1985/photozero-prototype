@@ -92,7 +92,6 @@ def photo_create(request):
 		return HttpResponseRedirect(instance.get_absolute_url())
 		
 	context = {
-		"instance": instance,
 		"form": form,
 	}
 
