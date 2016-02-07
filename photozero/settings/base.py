@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'timeline',
     'storages',
     'imagekit',
-    'crispy_forms',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
