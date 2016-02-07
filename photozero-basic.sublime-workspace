@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-style"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
 				"photo_",
 				"photo_detail"
 			],
@@ -78,10 +90,6 @@
 			[
 				"EMAIL",
 				"EMAIL_MAIN"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"conte",
@@ -292,10 +300,6 @@
 				"firebaseArray"
 			],
 			[
-				"text",
-				"text-decoration"
-			],
-			[
 				"background-",
 				"background-color"
 			],
@@ -324,9 +328,18 @@
 	"buffers":
 	[
 		{
+			"file": "timeline/templates/photo_update.html",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 676,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "timeline/templates/photo_upload.html",
+			"settings":
+			{
+				"buffer_size": 691,
 				"line_ending": "Unix"
 			}
 		}
@@ -379,6 +392,20 @@
 	},
 	"file_history":
 	[
+		"/Users/davidmcg/Desktop/photozero-basic/requirements.txt",
+		"/Users/davidmcg/Desktop/photozero-basic/photozero/settings/production.py",
+		"/Users/davidmcg/Desktop/photozero-basic/photozero/settings/base.py",
+		"/Users/davidmcg/Desktop/photozero-basic/photozero/settings/local.py",
+		"/Users/davidmcg/Desktop/photozero-basic/timeline/admin.py",
+		"/Users/davidmcg/Desktop/photozero-basic/timeline/views.py",
+		"/Users/davidmcg/Desktop/photozero-basic/timeline/forms.py",
+		"/Users/davidmcg/Desktop/photozero-basic/timeline/templates/photo_list.html",
+		"/Users/davidmcg/Desktop/photozero-basic/timeline/templates/messages_display.html",
+		"/Users/davidmcg/Desktop/photozero-basic/timeline/templates/photo_detail.html",
+		"/Users/davidmcg/Desktop/photozero-basic/timeline/static/css/style.css",
+		"/Users/davidmcg/Desktop/photozero-basic/timeline/templates/base.html",
+		"/Users/davidmcg/Desktop/photozero-basic/timeline/models.py",
+		"/Users/davidmcg/Desktop/photozero-basic/photozero/urls.py",
 		"/Users/davidmcg/Desktop/photozero-app/timeline/templates/base.html",
 		"/Users/davidmcg/Desktop/photozero-app/timeline/views.py",
 		"/Users/davidmcg/Desktop/photozero-app/timeline/static/css/style.css",
@@ -492,21 +519,7 @@
 		"/Users/davidmcg/development/django/projects/django_allauth/src/django_allauth/settings.py",
 		"/Users/davidmcg/development/django/projects/django_allauth/src/django_allauth/urls.py",
 		"/Users/davidmcg/development/django/projects/django_allauth/src/urls.py",
-		"/Users/davidmcg/development/django/projects/lwc/src/lwc/settings/base.py",
-		"/Users/davidmcg/development/django/projects/lwc/src/lwc/settings_old.py",
-		"/Users/davidmcg/development/django/projects/lwc/src/templates/share.html",
-		"/Users/davidmcg/development/django/projects/lwc/src/templates/home.html",
-		"/Users/davidmcg/development/django/projects/lwc/src/lwc/urls.py",
-		"/Users/davidmcg/development/django/projects/lwc/src/lwc/views.py",
-		"/Users/davidmcg/development/django/projects/lwc/src/templates/base.html",
-		"/Users/davidmcg/development/django/projects/lwc/src/templates/404.html",
-		"/Users/davidmcg/development/django/projects/lwc/src/templates/400.html",
-		"/Users/davidmcg/development/django/projects/lwc/src/templates/500.html",
-		"/Users/davidmcg/development/django/projects/lwc/src/templates/donotuse.html",
-		"/Users/davidmcg/development/django/projects/lwc/src/joins/views.py",
-		"/Users/davidmcg/development/django/projects/lwc/src/joins/admin.py",
-		"/Users/davidmcg/development/django/projects/lwc/src/joins/models.py",
-		"/Users/davidmcg/development/django/projects/lwc/src/lwc/middleware.py"
+		"/Users/davidmcg/development/django/projects/lwc/src/lwc/settings/base.py"
 	],
 	"find":
 	{
@@ -570,27 +583,56 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "timeline/templates/photo_update.html",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 676,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								26,
+								26
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "timeline/templates/photo_upload.html",
+					"settings":
+					{
+						"buffer_size": 691,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
