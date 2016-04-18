@@ -27,32 +27,19 @@ def photo_list(request): # list items
 			Q(user__last_name__icontains=query)
 			).distinct()
 
-	paginator = Paginator(queryset_list, 10) # Show 25 contacts per page
-	page_request_var = "page"
-	page = request.GET.get(page_request_var)
-	try:
-		queryset = paginator.page(page)
-	except PageNotAnInteger:
-	    # If page is not an integer, deliver first page.
-	    queryset = paginator.page(1)
-	except EmptyPage:
-	    # If page is out of range (e.g. 9999), deliver last page of results.
-	    queryset = paginator.page(paginator.num_pages)
-
 	context = {
-		"object_list": queryset,
+		"object_list": queryset_list,
 		"title": "PhotoZone",
-		"page_request_var": page_request_var,
 	}
 
 	return render(request, "photo_list.html", context)
 
 
-def photo_detail(request, slug=None): # retrieve
+def photo_detail(request, id=None): # retrieve
 	if not request.user.is_staff or not request.user.is_superuser:
 	 	raise Http404
 
-	instance = get_object_or_404(Photo, slug=slug)
+	instance = get_object_or_404(Photo, id=id)
 
 	if request.method == "POST":
 		form = CommentForm(request.POST)
@@ -61,7 +48,7 @@ def photo_detail(request, slug=None): # retrieve
 		    comment.author = request.user
 		    comment.post = instance
 		    comment.save()
-		    return redirect('timeline:detail', slug=instance.slug)
+		    return redirect('timeline:detail', id=instance.id)
 	else:
 		form = CommentForm()
 
@@ -98,11 +85,11 @@ def photo_create(request):
 	return render(request, "photo_upload.html", context)
 
 
-def photo_update(request, slug=None):
+def photo_update(request, id=None):
 	if not request.user.is_staff or not request.user.is_superuser:
 	 	raise Http404
 
-	instance = get_object_or_404(Photo, slug=slug)
+	instance = get_object_or_404(Photo, id=id)
 	form = PhotoForm(request.POST or None, request.FILES or None, instance=instance)
 
 	if form.is_valid():
@@ -114,7 +101,6 @@ def photo_update(request, slug=None):
 		return HttpResponseRedirect(instance.get_absolute_url())
 
 	context = {
-		"title": instance.title,
 		"instance": instance,
 		"form":form,
 	}
@@ -122,11 +108,11 @@ def photo_update(request, slug=None):
 	return render(request, "photo_update.html", context)
 
 
-def photo_delete(request, slug=None):
+def photo_delete(request, id=None):
 	if not request.user.is_staff or not request.user.is_superuser:
 	 	raise Http404
 
-	instance = get_object_or_404(Photo, slug=slug)
+	instance = get_object_or_404(Photo, id=id)
 	instance.delete()
 	messages.success(request, "Succesfully Deleted")
 
